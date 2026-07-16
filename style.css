@@ -1,0 +1,67 @@
+body {
+  font-family: -apple-system, Segoe UI, Arial, sans-serif;
+  padding: 32px;
+  color: #222;
+  background: #fafafa;
+}
+
+h1 {
+  margin: 0 0 4px 0;
+  font-size: 20px;
+}
+
+.subtitle {
+  margin: 0 0 24px 0;
+  color: #666;
+  font-size: 13px;
+}
+
+label {
+  display: block;
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  background: #3366ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+button:hover:not(:disabled) {
+  background: #2952cc;
+}
+
+#status {
+  margin-top: 16px;
+  font-size: 13px;
+}
+
+#status.success {
+  color: #1a8a4a;
+}
+
+#status.error {
+  color: #cc3333;
+}

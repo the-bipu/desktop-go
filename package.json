@@ -1,0 +1,12 @@
+{
+  "name": "desktop-go",
+  "version": "0.1.0",
+  "description": "Check if your Expo app is live, then open it.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^31.2.1"
+  }
+}
