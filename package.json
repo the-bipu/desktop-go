@@ -8,5 +8,27 @@
   },
   "devDependencies": {
     "electron": "^31.2.1"
+  },
+  "build": {
+    "appId": "com.desktopgo.app",
+    "productName": "Desktop Go",
+    "asar": true,
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "**/*",
+      "!release/**"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
   }
 }

@@ -29,7 +29,6 @@ checkButton.addEventListener("click", async () => {
   }
 });
 
-// Also let people just press Enter in the input box.
 urlInput.addEventListener("keydown", (event) => {
   if (event.key === "Enter") checkButton.click();
 });
