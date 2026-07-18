@@ -25,7 +25,10 @@
       "!release/**"
     ],
     "win": {
-      "target": "nsis",
+      "target": [
+        "nsis",
+        "appx"
+      ],
       "icon": "build/icon.ico"
     },
     "nsis": {
