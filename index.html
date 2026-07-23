@@ -6,15 +6,40 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Desktop Go</h1>
-    <p class="subtitle">Check if your Expo app is running, then open it.</p>
+    <div class="app-container">
+      <button id="hamburger-btn" class="hamburger-btn" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-    <label for="url-input">App URL</label>
-    <input id="url-input" type="text" value="http://localhost:8081" />
+      <nav id="side-nav" class="side-nav">
+        <div class="nav-logo">
+          <img src="build/icon.ico" alt="Desktop Go" />
+          <span class="nav-title">Desktop Go</span>
+        </div>
+        <ul class="nav-list">
+          <li class="nav-item active" data-view="open-ports">
+            <span class="nav-icon">🔌</span>
+            <span>Open Ports</span>
+          </li>
+        </ul>
+      </nav>
 
-    <button id="check-button">Check &amp; Open</button>
+      <div id="nav-overlay" class="nav-overlay"></div>
 
-    <p id="status"></p>
+      <main class="main-content">
+        <h1>Desktop Go</h1>
+        <p class="subtitle">Check if your Expo app is running, then open it.</p>
+
+        <label for="url-input">App URL</label>
+        <input id="url-input" type="text" value="http://localhost:8081" />
+
+        <button id="check-button">Check &amp; Open</button>
+
+        <p id="status"></p>
+      </main>
+    </div>
 
     <script src="renderer.js"></script>
   </body>
