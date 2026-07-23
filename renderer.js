@@ -2,6 +2,37 @@ const urlInput = document.getElementById("url-input");
 const checkButton = document.getElementById("check-button");
 const status = document.getElementById("status");
 
+const appContainer = document.querySelector(".app-container");
+const hamburgerBtn = document.getElementById("hamburger-btn");
+const navOverlay = document.getElementById("nav-overlay");
+const NAV_BREAKPOINT = 700;
+
+function openNav() {
+  appContainer.classList.add("nav-open");
+}
+
+function closeNav() {
+  appContainer.classList.remove("nav-open");
+}
+
+hamburgerBtn.addEventListener("click", () => {
+  appContainer.classList.toggle("nav-open");
+});
+
+navOverlay.addEventListener("click", closeNav);
+
+document.querySelectorAll(".nav-item").forEach((item) => {
+  item.addEventListener("click", () => {
+    if (window.innerWidth <= NAV_BREAKPOINT) closeNav();
+  });
+});
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth <= NAV_BREAKPOINT) {
+    closeNav();
+  }
+});
+
 checkButton.addEventListener("click", async () => {
   const url = urlInput.value.trim();
 

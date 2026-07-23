@@ -9,9 +9,11 @@ let mainWindow;
 
 function createMainWindow() {
   mainWindow = new BrowserWindow({
-    width: 480,
-    height: 360,
-    resizable: false,
+    width: 760,
+    height: 480,
+    minWidth: 400,
+    minHeight: 320,
+    resizable: true,
     icon: path.join(__dirname, "build", "icon.ico"),
     webPreferences: {
       preload: path.join(__dirname, "preload.js"),
